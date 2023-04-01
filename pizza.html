@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- For the toasts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+
+    <title>Food ordering</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Give Me Food</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./directions.html">Directions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./hours.html">Hours</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+              </ul>
+            <span class="navbar-text">
+                <a href="cart.php" id="cart_button" class="btn btn-light" style="color:black;">My Cart <i
+                        class="fa fa-shopping-cart" style="font-size:24px;"></i></a>
+
+                <button type="button" class="btn btn-dark" onclick="logout()">Logout</button>
+            </span>
+
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container">
+
+
+        <h4 style="margin:10px; text-align:center;"> Choose one of the Pizza's 🍕 </h4>
+        <div class="row justify-content-center">
+
+            <div class="card" id="regular_pizza_card" style="width: 24rem; margin:10px;">
+                <div class="card-body">
+                    <h5 class="card-title">Regular </h5>
+
+
+                    <p class="card-text"></p>
+                    <p>Our Regular pizza is a <span
+                            style="font-family: 'courier new', courier, monospace;">thin-crust</span> or Neapolitan
+                        pizza.</p>
+                    <p>They come in 2 sizes:</p>
+                    <ul>
+                        <li>small <strong>(12" in diameter)&nbsp;</strong>- suitable for 1 to 2 people</li>
+                        <li>large <strong>(16" in diameter) </strong>- suitable for&nbsp;2 to 4 people.</li>
+                    </ul>
+                    <p></p>
+
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="row">
+            <table class="table" id="regular_pizza_table" style="border: 2px solid black">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Regular Pizza</th>
+                        <th scope="col">Small</th>
+                        <th scope="col">Large</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                        <th>Cheese</th>
+            
+                        <td><button type="button" class="btn btn-primary add_to_cart"
+                                onclick="add_to_cart('Small Regular Pizza - Cheese', 12.70)"><strong>12.70</strong></button>
+                        </td>
+                        <td><button type="button" class="btn btn-success add_to_cart"
+                                onclick="add_to_cart('Large Regular Pizza - Cheese', 17.95)"><strong>17.95</strong></button>
+                        </td>
+            
+                    </tr>
+            
+                    <tr>
+                        <th>1 topping</th>
+            
+                        <td><button type="button" class="btn btn-primary add_to_cart"
+                                onclick="add_to_cart('Small Regular Pizza - 1 Topping', 13.70)"><strong>13.70</strong></button></td>
+                        <td><button type="button" class="btn btn-success add_to_cart"
+                                onclick="add_to_cart('Large Regular Pizza - 1 Topping', 19.95)"><strong>19.95</strong></button></td>
+            
+                    </tr>
+            
+                    <tr>
+                        <th>2 Toppings</th>
+            
+                        <td><button type="button" class="btn btn-primary add_to_cart"
+                                onclick="add_to_cart('Small Regular Pizza - 2 Toppings', 15.20)"><strong>15.20</strong></button></td>
+                        <td><button type="button" class="btn btn-success add_to_cart"
+                                onclick="add_to_cart('Large Regular Pizza - 2 Toppings', 21.95)"><strong>21.95</strong></button></td>
+            
+                    </tr>
+            
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

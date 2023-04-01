@@ -1,0 +1,18 @@
+.card {
+    width: 250px; 
+    height: 460px; 
+    }
+.card-body {
+    position: relative;
+    padding-bottom: 2rem;
+    }
+
+.card-body .btn {
+    position: absolute;
+    bottom: 10px;
+    }
+          
+#checkout_button {
+    font-weight: bold;
+    font-size: 24px;
+}
